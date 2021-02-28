@@ -1174,7 +1174,7 @@ numValidPassports = getNumValidPassports(passports);
 console.warn(`Answer: ${numValidPassports}`);
 
 function getNumValidPassports(passports) {
-	return passports
+  return passports
     .map(mapToArrayOfFields)
     .reduce((numValid, passportFields) => {
       if (passportFields.length === 8) {
@@ -1188,8 +1188,8 @@ function getNumValidPassports(passports) {
 }
 
 function mapToArrayOfFields(passport) {
-	return passport
-  	.replaceAll('\n', ' ')
+  return passport
+    .replaceAll('\n', ' ')
     .split(' ')
     .map(fieldAndValue => fieldAndValue.slice(0, 3));
 }
