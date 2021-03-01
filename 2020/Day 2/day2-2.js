@@ -1004,7 +1004,7 @@ let countValidPasswords = getCountValidPasswords(passwordRules);
 console.warn(`Answer: ${countValidPasswords}`);
 
 function getCountValidPasswords(passwordRules) {
-	return passwordRules
+  return passwordRules
     .map(passwordRule => {
       const [minMax, rawCharacter, password] = passwordRule.split(' ');
       const [min, max] = minMax.split('-');
@@ -1019,6 +1019,6 @@ function getCountValidPasswords(passwordRules) {
 }
 
 function exactlyOneCharacterMatches(x, y, charToMatch) {
-	return x === charToMatch ? y !== charToMatch : y === charToMatch;
+  return x === charToMatch ? y !== charToMatch : y === charToMatch;
 }
 
